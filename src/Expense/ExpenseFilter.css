@@ -1,0 +1,21 @@
+
+
+
+.expense-filter__control{
+    display: flex;
+    
+    justify-content: space-around;
+    
+}
+
+.expense-filter__control label{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.expense-filter__control select{
+    padding: 12px;
+    width: 150px;
+    font-size: 16px;
+    text-align: center;
+}

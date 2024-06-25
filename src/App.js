@@ -1,36 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./Expense.css";
 import Expense from "./Expense/Expense";
 import React, { useState } from "react";
-import NewExpense from "./NewExpense/NewExpense";
+
 import ExpenseForm from "./NewExpense/ExpenseForm";
+import ExpenseFilter from "./Expense/ExpenseFilter";
+
 const cars = [
-  {
-    date: new Date(20.12, 1196),
-    name: "Suzuki",
-    amount: 1599.6,
-  },
-  {
-    date: new Date(20.12, 1196),
-    name: "Toyota",
-    amount: 3299.6,
-  },
-  {
-    date: new Date(20.12, 1196),
-    name: "Chaghan",
-    amount: 4599.0,
-  },
-  {
-    date: new Date(20.12, 1196),
-    name: "Honda",
-    amount: 2599.22,
-  },
-  {
-    date: new Date(20.12, 1196),
-    name: "Hundai",
-    amount: 599.6,
-  },
+  { id: 'e1', name: 'Toilet Paper', amount: 94.12, date: new Date(2020, 7, 14) },
+  { id: 'e2',name: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+  { id: 'e3', name: 'Car Insurance', amount: 294.67, date: new Date(2022, 2, 28) },
+  { id: 'e4', name: 'New Desk ', amount: 450, date: new Date(2023, 5, 12) },
 ];
 
 function App() {
@@ -39,14 +19,22 @@ function App() {
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => [expense, ...prevExpenses]);
   };
-  console.log(expenses);
+
+  const [filteredYear, setFilteredYear] = useState("2020");
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+    
+  };
+
   return (
     <div className="App">
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={addExpenseHandler} />
-      {cars.map((expense, index) => (
+      <ExpenseFilter  onChange={filterChangeHandler} />
+      {expenses.map((expense) => (
         <Expense
-          key={index}
+          key={expense.id}
           date={expense.date}
           name={expense.name}
           amount={expense.amount}

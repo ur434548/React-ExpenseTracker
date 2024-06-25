@@ -1,7 +1,7 @@
 .expense {
   display: flex;
   justify-content: space-around;
-  background-color:dimgray;
+  background-color: dimgray;
   height: 100px;
   align-items: center;
   font-size: 22px;
@@ -11,7 +11,7 @@
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
 }
-body{
+body {
   background-color: rgb(45, 44, 44);
 }
 .title {
@@ -20,11 +20,11 @@ body{
   color: white;
 }
 .amount {
-  background-color:indigo;
+  background-color: indigo;
   color: white;
   height: 30px;
   padding: 6px;
-  width: max-content;
+width: 100px;
   border-radius: 10px;
   border: 1px solid white;
   padding: 10px;
@@ -34,18 +34,23 @@ body{
   background-color: rgb(45, 44, 44);
   color: white;
   border: 1px solid white;
-  padding: 6px;
+  padding: 8px;
   border-radius: 10px;
   display: flex;
+  height: 70px;
+  width: 70px;
   flex-direction: column;
+
+  
 }
-.month{
+.month {
   font-size: 13px;
+  margin-bottom: 5px;
 }
-.year{
+.year {
   font-size: 11px;
+  margin-bottom: 5px;
 }
-.day{
+.day {
   font-size: 20px;
 }
-
