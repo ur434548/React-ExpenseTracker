@@ -23,8 +23,8 @@ body {
   background-color: indigo;
   color: white;
   height: 30px;
-  padding: 6px;
-width: 100px;
+
+  width: 100px;
   border-radius: 10px;
   border: 1px solid white;
   padding: 10px;
@@ -40,8 +40,6 @@ width: 100px;
   height: 70px;
   width: 70px;
   flex-direction: column;
-
-  
 }
 .month {
   font-size: 13px;

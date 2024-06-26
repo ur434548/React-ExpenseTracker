@@ -39,6 +39,7 @@ export default function ExpenseForm(props) {
             className="name"
             value={titleName}
             placeholder="Enter The Name"
+            required
             onChange={nameChangeHandler}
           />
         </div>
@@ -47,6 +48,7 @@ export default function ExpenseForm(props) {
           <input
             type="number"
             className="name"
+            required
             value={titleAmount}
             placeholder="Enter The Amount"
             onChange={amountChangeHandler}
@@ -58,6 +60,7 @@ export default function ExpenseForm(props) {
             type="date"
             value={titleDate}
             className="name"
+            required
             onChange={dateChangeHandler}
           />
         </div>
