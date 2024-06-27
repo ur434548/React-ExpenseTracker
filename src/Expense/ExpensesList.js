@@ -1,13 +1,13 @@
 import React from "react";
 import Expense from "./Expense";
 export default function ExpensesList(props) {
-  
+  console.log(props.items);
   return (
     <div>
       {props.items.length === 0 ? (
         <p>No Expense Item Found</p>
       ) : (
-       props.items.map((expense) => (
+        props.items.map((expense) => (
           <Expense
             key={expense.id}
             date={expense.date}
@@ -17,5 +17,5 @@ export default function ExpensesList(props) {
         ))
       )}
     </div>
-  );
+  )
 }

@@ -5,6 +5,8 @@ export default function ExpenseFilter(props) {
   const dropdownChanger = (event) => {
     props.onChange(event.target.value);
   };
+  console.log(props);
+  console.log(props.onChange);
 
   return (
     <div className="expense-filter">

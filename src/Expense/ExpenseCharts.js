@@ -54,7 +54,7 @@ export default function ExpenseCharts(props) {
   ];
   for (const expense of props.expense) {
     const expenseMonth = expense.date.getMonth(); // month of initial array
-
+    console.log(props.expense);
     charDataPoints[expenseMonth].value += expense.amount; // ad the expensemotnh arrays values to the initial arry
     console.log(charDataPoints);
   }
